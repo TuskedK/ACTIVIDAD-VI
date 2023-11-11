@@ -1,6 +1,7 @@
 const autoPartes = [];
 let nextID = 1;
 module.exports = {
+    //Alvarado Balcazar Abraham
     createPart: (req, res) => {
         const { name, refNumber, price, disponibility,isBestSeller } = req.body;
         const part = {
@@ -14,7 +15,7 @@ module.exports = {
         autoPartes.push(part);
         res.json({ message: "AutoParte registrada correctamente", part });
     },
-    
+    //Chalá González Iran Antonio
     getAllAutoParts: (req, res) => {
         res.json(autoPartes);
     },
@@ -56,7 +57,7 @@ module.exports = {
             res.status(404).json({ message: 'Auto-Parte no encontrada' });
         }
     },
-
+//Leyva López Eric de Jesus
     deleteAutoPart: (req, res) => {
         const id = parseInt(req.params.id);
         const index = autoPartes.findIndex(a => a.id === id);
