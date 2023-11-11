@@ -21,7 +21,7 @@ module.exports = {
             res.status(404).json({ message: 'Cliente no encontrado'});
         }
     },
-
+//Valdivieso Reyes Sandra Denisse
     updateCustomer: (req, res) => {
         const id = parseInt(req.params.id);
         const { name, age, telefono, ciudad  } = req.body;
